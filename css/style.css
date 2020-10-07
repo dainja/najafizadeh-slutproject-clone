@@ -10,17 +10,13 @@
 ================================================
 */
 :root {
-  --primary-bg-color: #c7ddea;
-  --secondary-bg-color: #f17949;
-  --third-bg-color: #fab131;
-  --bg-grey-color: #a9a19e;
-  --bg-darkgrey-color: #777574;
+  --primary-bg-color: #017a9b;
+  --secondary-bg-color: #6d7780;
 
-  --font-black-op0-8: rgba(0, 0, 0, 0.8);
-  --font-black-op0-7: rgba(0, 0, 0, 0.7);
-  --font-black-op0-6: rgba(0, 0, 0, 0.6);
-  --font-black-op0-5: rgba(0, 0, 0, 0.5);
-  --font-black-op0-4: rgba(0, 0, 0, 0.4);
+  --primary-border-color: ##02b3e4;
+
+  --primary-text-color: ##2e3d49;
+  --bg-darkgrey-color: #777574;
 
   --font-black-color: #000000;
   --font-white-color: #ffffff;
@@ -36,4 +32,93 @@
 }
 
 html {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Open Sans, sans-serif;
+  font-size: 16px;
+  font-family: Open Sans, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+p {
+  color: #525c65;
+  line-height: 24px;
+}
+
+#trial-bar {
+  background: linear-gradient(90deg, #017a9b, #018377);
+}
+
+#trial-bar .trial-bar-text {
+  font-size: 1.1rem;
+  color: var(--font-white-color);
+}
+
+#trial-bar .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0;
+}
+
+#trial-bar .fa-times {
+  color: var(--font-white-color);
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+header {
+  max-width: 1180px;
+}
+
+.navbar {
+  justify-content: unset;
+}
+
+.navbar-brand {
+  margin-left: auto;
+  margin-right: auto;
+  width: 11.25rem;
+}
+
+.btn-primary {
+  background: #017a9b;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.09375rem;
+  line-height: 1.8125rem;
+  text-transform: uppercase;
+  height: 2rem;
+  min-width: 131px;
+  width: auto;
+  padding: 0 10px;
+  border: 0.125rem solid transparent;
+  box-shadow: 0 0 8px 0 rgba(17, 22, 26, 0.16),
+    0 4px 8px 0 rgba(17, 22, 26, 0.08), 0 8px 16px 0 rgba(17, 22, 26, 0.08);
+}
+
+header .nav-item {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.hero-container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.hero-showcase {
+  width: 60%;
+  background: url(/img/HomepageBanner_tablet.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-container .btn-primary {
+  height: 2.75rem;
 }
