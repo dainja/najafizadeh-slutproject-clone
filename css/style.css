@@ -1,0 +1,39 @@
+/*
+================================================
+    Font Import
+================================================
+*/
+
+/*
+================================================
+    Color Variables
+================================================
+*/
+:root {
+  --primary-bg-color: #c7ddea;
+  --secondary-bg-color: #f17949;
+  --third-bg-color: #fab131;
+  --bg-grey-color: #a9a19e;
+  --bg-darkgrey-color: #777574;
+
+  --font-black-op0-8: rgba(0, 0, 0, 0.8);
+  --font-black-op0-7: rgba(0, 0, 0, 0.7);
+  --font-black-op0-6: rgba(0, 0, 0, 0.6);
+  --font-black-op0-5: rgba(0, 0, 0, 0.5);
+  --font-black-op0-4: rgba(0, 0, 0, 0.4);
+
+  --font-black-color: #000000;
+  --font-white-color: #ffffff;
+}
+
+/*
+================================================
+    Simple CSS Reset
+================================================
+*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+}
