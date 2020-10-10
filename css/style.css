@@ -3,7 +3,7 @@
     Font Import
 ================================================
 */
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
 /*
 ================================================
     Color Variables
@@ -13,9 +13,9 @@
   --primary-bg-color: #017a9b;
   --secondary-bg-color: #6d7780;
 
-  --primary-border-color: ##02b3e4;
+  --primary-border-color: #02b3e4;
 
-  --primary-text-color: ##2e3d49;
+  --primary-text-color: #2e3d49;
   --bg-darkgrey-color: #777574;
 
   --font-black-color: #000000;
@@ -38,7 +38,7 @@ body {
 }
 
 body {
-  font-family: Open Sans, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
 }
 
@@ -53,8 +53,58 @@ a {
   color: #fff;
 }
 
-b {
-  font-weight: bold;
+.w-20 {
+  width: 20%;
+}
+
+.img-55px {
+  height: 55px;
+}
+
+.primary-bg {
+  background-color: var(--primary-bg-color);
+  color: var(--font-white-color);
+}
+
+.secondary-bg {
+  background-color: var(--secondary-bg-color);
+  color: var(--font-white-color);
+}
+/*
+================================================
+    Custom button
+================================================
+*/
+.btn-custom {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 8px 0 rgba(17, 22, 26, 0.16),
+    0 4px 8px 0 rgba(17, 22, 26, 0.08), 0 8px 16px 0 rgba(17, 22, 26, 0.08);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  color: var(--font-white-color) !important;
+  background-color: var(--primary-bg-color);
+  border-color: var(--primary-bg-color);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.btn-custom:hover {
+  color: var(--font-white-color);
+  background-color: #005168;
+  border-color: #005168;
 }
 
 /*
@@ -84,6 +134,11 @@ b {
   padding: 1rem 1.5rem;
 }
 
+/*
+================================================
+    Here is the customized "close" code
+================================================
+*/
 #trialbar .tb-close-btn-show {
   position: absolute;
   top: 18px;
@@ -110,4 +165,366 @@ input[type="checkbox"] {
 /* Toggled State */
 input[type="checkbox"]:checked ~ #trialbar {
   display: none;
+}
+
+/*
+================================================
+    Content Container for the whole layout
+================================================
+*/
+
+.content-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/*
+================================================
+    Top Navigation that breaks to Hamburger menu inside 1092px
+================================================
+*/
+
+#top-nav .tn-container,
+#top-nav .nav-logo {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1rem;
+}
+
+#top-nav .hb-top,
+#top-nav .hb-middle,
+#top-nav .hb-bottom {
+  width: 25px;
+  height: 4px;
+  background-color: var(--primary-border-color);
+}
+
+#top-nav .hb-middle {
+  margin: 5px 0;
+}
+
+#top-nav .tn-logo-container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+#top-nav .nav-logo {
+  margin: 0 auto;
+}
+
+#top-nav .nav-logo svg {
+  min-width: 160px;
+  margin: 0 auto;
+}
+
+#top-nav .tn-menu {
+  display: none;
+}
+
+/*
+================================================
+    Media Queries for Top Nav
+
+    Goes from Hamburger menu to simple navigation menu.
+================================================
+*/
+@media (min-width: 1092px) {
+  #top-nav .hamburger-icon,
+  #top-nav .empty-div {
+    display: none;
+  }
+
+  #top-nav .tn-logo-container {
+    width: auto;
+    margin: 0;
+  }
+
+  #top-nav .tn-container {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  #top-nav .tn-menu {
+    display: block;
+  }
+  #top-nav .tn-menu-list {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+  }
+  #top-nav .tn-menu a {
+    color: var(--font-black-color);
+  }
+
+  #top-nav .tn-menu-item {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+}
+
+/*
+================================================
+    Hero showcase with a table
+================================================
+*/
+
+#hero-showcase .hero-showcase-container {
+  background: url(/img/HomepageBanner_tablet.jpg);
+  background-size: cover;
+  padding: 1.5rem 2rem 1.5rem;
+}
+
+#hero-showcase .hero-header h1,
+#hero-showcase .hero-header p,
+#hero-showcase .hero-text p,
+#hero-showcase .hero-logo {
+  max-width: 550px;
+  color: var(--font-white-color);
+}
+
+#hero-showcase .hero-header h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+#hero-showcase .hero-header p {
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+#hero-showcase .hero-header .btn-custom {
+  padding: 1rem 4.3rem;
+}
+
+#hero-showcase .hero-text p {
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+}
+
+#hero-showcase .hero-logo-list li {
+  display: inline-block;
+  margin-right: 1.1rem;
+}
+
+/*
+================================================
+    Table starts here
+================================================
+*/
+#hero-table {
+  padding: 1.5rem 2.5rem;
+}
+
+#hero-table .hero-table-list {
+  width: 100%;
+  color: #525c65;
+}
+#hero-table h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 0.85rem;
+  color: var(--primary-text-color);
+}
+
+#hero-table h2 strong {
+  color: var(--primary-text-color);
+  font-weight: 600;
+}
+
+#hero-table td,
+#hero-table th {
+  border: 1px solid var(--font-white-color);
+  padding: 0.5rem 2rem;
+  font-size: 1.1rem;
+}
+
+#hero-table th:not(:first-child) {
+  width: 20%;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#hero-table td:first-child {
+  width: 60%;
+}
+
+#hero-table td:not(:first-child) {
+  text-align: center;
+}
+
+@media (min-width: 1092px) {
+  #hero-showcase {
+    display: flex;
+  }
+
+  #hero-showcase .hero-showcase-container {
+    width: 60%;
+    margin: 0;
+  }
+
+  #hero-table {
+    width: 40%;
+    padding: 0;
+  }
+  #hero-table h2 {
+    line-height: 2.5rem;
+  }
+
+  #hero-table td {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 845px) {
+  #hero-showcase .hero-text,
+  #hero-showcase .hero-logo {
+    display: none;
+  }
+
+  #hero-showcase .hero-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #hero-showcase .hero-header h1,
+  #hero-showcase .hero-header p {
+    max-width: 90%;
+    padding: 0.5rem 0;
+  }
+  #hero-showcase .hero-header p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  #hero-showcase .hero-header h1 {
+    padding-top: 2rem;
+  }
+  #hero-showcase .hero-header a {
+    margin-bottom: 1rem;
+  }
+
+  #hero-table {
+    padding: 0 1rem;
+  }
+
+  #hero-table h2 {
+    padding-top: 1.5rem;
+    font-size: 20px;
+  }
+
+  #hero-table .hero-table-list td {
+    font-size: 13px;
+  }
+  #hero-table th:not(:first-child) {
+    width: 60px;
+    font-size: 12px;
+  }
+  #hero-table td:first-child {
+    width: auto;
+  }
+
+  #hero-table th,
+  #hero-table td {
+    padding: 0.4rem 1rem;
+  }
+}
+
+.sc-list {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.sc-list .sc-item a {
+  color: #525c65;
+}
+.sc-list .sc-item:first-child {
+  font-weight: 600;
+}
+
+.selected {
+  border-bottom: 2px solid #02b3e4;
+}
+
+#carousel {
+  padding: 0 1rem;
+  display: flex;
+  max-width: 550px;
+  overflow: auto;
+}
+.img-cards {
+  width: 100%;
+}
+.img-card-header {
+  height: 136px;
+  width: 242px;
+  padding: 0.8rem;
+  background-image: url(/img/carousel/data_engineer_catalog_image.jpg);
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.img-card-item {
+  min-width: 15rem;
+  display: block;
+  margin: 0 0.625rem 0.75rem 0;
+  box-shadow: 5px 5px 25px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header-tag {
+  align-self: start;
+  background-color: #ad3959;
+  padding: 0 0.5rem;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.img-card-body {
+  color: var(--primary-text-color);
+  font-weight: 600;
+  padding: 0.8rem;
+}
+
+.sc-ratings {
+  display: flex;
+  justify-content: space-between;
+  color: var(--primary-text-color);
+  font-size: 12px;
+}
+
+.star-rating img {
+  margin-top: 4px;
+  float: left;
+  width: 14px !important;
+}
+.fa-signal {
+  color: var(--primary-border-color);
+  font-size: 12px;
+}
+
+.img-card-footer {
+  padding: 0 0.8rem;
+}
+.img-card-footer h5 {
+  color: var(--primary-text-color);
 }
