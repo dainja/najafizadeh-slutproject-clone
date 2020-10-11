@@ -16,6 +16,8 @@
   --primary-border-color: #02b3e4;
 
   --primary-text-color: #2e3d49;
+  --secondary-text-color: #525c65;
+
   --bg-darkgrey-color: #777574;
 
   --font-black-color: #000000;
@@ -29,6 +31,7 @@
 */
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth !important;
 }
 
 html,
@@ -40,6 +43,7 @@ body {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
+  overflow-anchor: none;
 }
 
 body,
@@ -57,8 +61,8 @@ a {
   width: 20%;
 }
 
-.img-55px {
-  height: 55px;
+.img-45px {
+  height: 45px;
 }
 
 .primary-bg {
@@ -130,7 +134,7 @@ a {
 }
 
 #trialbar .tb-text {
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding: 1rem 1.5rem;
 }
 
@@ -138,7 +142,8 @@ a {
 ================================================
     Here is the customized "close" code
 ================================================
-*/
+ */
+
 #trialbar .tb-close-btn-show {
   position: absolute;
   top: 18px;
@@ -174,13 +179,13 @@ input[type="checkbox"]:checked ~ #trialbar {
 */
 
 .content-container {
-  max-width: 1300px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
 /*
 ================================================
-    Top Navigation that breaks to Hamburger menu inside 1092px
+    Top Navigation that breaks to Hamburger menu inside 992px
 ================================================
 */
 
@@ -188,19 +193,19 @@ input[type="checkbox"]:checked ~ #trialbar {
 #top-nav .nav-logo {
   display: flex;
   align-items: center;
-  padding: 1rem 1rem;
+  padding: 0.7rem;
 }
 
 #top-nav .hb-top,
 #top-nav .hb-middle,
 #top-nav .hb-bottom {
-  width: 25px;
-  height: 4px;
+  width: 20px;
+  height: 3px;
   background-color: var(--primary-border-color);
 }
 
 #top-nav .hb-middle {
-  margin: 5px 0;
+  margin: 3px 0;
 }
 
 #top-nav .tn-logo-container {
@@ -221,6 +226,12 @@ input[type="checkbox"]:checked ~ #trialbar {
   display: none;
 }
 
+#top-nav .tn-menu-btn {
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.12rem;
+}
+
 /*
 ================================================
     Media Queries for Top Nav
@@ -228,7 +239,7 @@ input[type="checkbox"]:checked ~ #trialbar {
     Goes from Hamburger menu to simple navigation menu.
 ================================================
 */
-@media (min-width: 1092px) {
+@media (min-width: 992px) {
   #top-nav .hamburger-icon,
   #top-nav .empty-div {
     display: none;
@@ -254,12 +265,12 @@ input[type="checkbox"]:checked ~ #trialbar {
     align-items: center;
   }
   #top-nav .tn-menu a {
-    color: var(--font-black-color);
+    color: var(--secondary-text-color);
   }
 
   #top-nav .tn-menu-item {
     padding: 1rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 
@@ -272,7 +283,8 @@ input[type="checkbox"]:checked ~ #trialbar {
 #hero-showcase .hero-showcase-container {
   background: url(/img/HomepageBanner_tablet.jpg);
   background-size: cover;
-  padding: 1.5rem 2rem 1.5rem;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  background-repeat: no-repeat;
 }
 
 #hero-showcase .hero-header h1,
@@ -284,17 +296,20 @@ input[type="checkbox"]:checked ~ #trialbar {
 }
 
 #hero-showcase .hero-header h1 {
-  font-size: 1.75rem;
+  font-size: 1.7rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
 #hero-showcase .hero-header p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.3rem;
   line-height: 1.2;
+  font-size: 0.9rem;
 }
 #hero-showcase .hero-header .btn-custom {
-  padding: 1rem 4.3rem;
+  padding: 0.8rem 3.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.15rem;
 }
 
 #hero-showcase .hero-text p {
@@ -305,7 +320,8 @@ input[type="checkbox"]:checked ~ #trialbar {
 
 #hero-showcase .hero-logo-list li {
   display: inline-block;
-  margin-right: 1.1rem;
+  margin-right: 2rem;
+  height: 45px;
 }
 
 /*
@@ -323,9 +339,9 @@ input[type="checkbox"]:checked ~ #trialbar {
 }
 #hero-table h2 {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.5rem;
   color: var(--primary-text-color);
 }
 
@@ -337,13 +353,12 @@ input[type="checkbox"]:checked ~ #trialbar {
 #hero-table td,
 #hero-table th {
   border: 1px solid var(--font-white-color);
-  padding: 0.5rem 2rem;
-  font-size: 1.1rem;
+  padding: 0.5rem 1.7rem;
+  font-size: 1rem;
 }
 
 #hero-table th:not(:first-child) {
-  width: 20%;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -354,9 +369,14 @@ input[type="checkbox"]:checked ~ #trialbar {
 
 #hero-table td:not(:first-child) {
   text-align: center;
+  font-size: 0.8rem;
 }
-
-@media (min-width: 1092px) {
+/*
+================================================
+    Media Queries for showcase and table MINIMUM width 992px
+================================================
+*/
+@media (min-width: 992px) {
   #hero-showcase {
     display: flex;
   }
@@ -365,7 +385,9 @@ input[type="checkbox"]:checked ~ #trialbar {
     width: 60%;
     margin: 0;
   }
-
+  #hero-table td:first-child {
+    padding: 0.4rem 0 0.4rem 0.6rem;
+  }
   #hero-table {
     width: 40%;
     padding: 0;
@@ -375,10 +397,14 @@ input[type="checkbox"]:checked ~ #trialbar {
   }
 
   #hero-table td {
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 1rem;
   }
 }
-
+/*
+================================================
+    Media Queries for showcase and table MAXIMUM 845px
+================================================
+*/
 @media (max-width: 845px) {
   #hero-showcase .hero-text,
   #hero-showcase .hero-logo {
@@ -434,42 +460,112 @@ input[type="checkbox"]:checked ~ #trialbar {
   }
 }
 
-.sc-list {
+/*
+================================================
+    School card section starts here with image carousel
+
+    Inside 992px the carousel gets a horizontal scroll.
+================================================
+*/
+
+.sc-carousel {
+  margin: 1rem 0;
+}
+
+#school-card {
+  padding: 3rem 0;
+}
+
+/* Header for carousel */
+#school-card h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--primary-text-color);
+  text-align: center;
+  margin: 0 auto 1.5rem;
+}
+
+/* UL for the categories before carousel */
+#school-card .sc-list {
   display: flex;
   justify-content: space-around;
   margin: 0 1rem;
   text-align: center;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: 1px;
   line-height: 1.5;
 }
 
-.sc-list .sc-item a {
+#school-card .sc-list .sc-item a {
   color: #525c65;
 }
-.sc-list .sc-item:first-child {
+
+#school-card .sc-item {
+  margin-bottom: 1rem;
+}
+
+#school-card .sc-list .sc-item:first-child {
   font-weight: 600;
 }
 
-.selected {
+#school-card .selected {
   border-bottom: 2px solid #02b3e4;
 }
 
-#carousel {
-  padding: 0 1rem;
-  display: flex;
-  max-width: 550px;
+/*
+================================================
+    Media Queries for the School section
+
+    Header and categories only, carousel comes later below
+================================================
+*/
+
+@media (min-width: 992px) {
+  #school-card .sc-list {
+    font-size: 1rem;
+  }
+
+  #school-card .sc-item {
+    margin-right: 0.6rem;
+  }
+}
+
+/* Carousel starts here */
+
+.sc-carousel-items {
+  max-width: 100%;
   overflow: auto;
 }
-.img-cards {
+
+#carousel .carousel-img-container {
+  padding: 0 1rem;
+  display: flex;
+  transition: all 0.3s ease 0s;
+}
+#carousel .img-cards {
   width: 100%;
 }
-.img-card-header {
+
+#carousel .img-card-item {
+  min-width: 15rem;
+  display: block;
+  margin: 0 0.625rem 0.75rem 0;
+  box-shadow: 5px 5px 25px 0 rgba(83, 83, 83, 0.2);
+}
+
+/* Settings for images inside card */
+.img-card-header-one,
+.img-card-header-two,
+.img-card-header-three,
+.img-card-header-four,
+.img-card-header-five,
+.img-card-header-six,
+.img-card-header-seven,
+.img-card-header-eight {
   height: 136px;
   width: 242px;
   padding: 0.8rem;
-  background-image: url(/img/carousel/data_engineer_catalog_image.jpg);
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -480,16 +576,34 @@ input[type="checkbox"]:checked ~ #trialbar {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
 }
 
-.img-card-item {
-  min-width: 15rem;
-  display: block;
-  margin: 0 0.625rem 0.75rem 0;
-  box-shadow: 5px 5px 25px 0 rgba(0, 0, 0, 0.2);
+.img-card-header-one {
+  background-image: url(/img/carousel/data_engineer_catalog_image.jpg);
+}
+.img-card-header-two {
+  background-image: url(/img/carousel/data_analyst_catalog_image.jpg);
+}
+.img-card-header-three {
+  background-image: url(/img/carousel/data_scientist_catalog_image.jpg);
+}
+.img-card-header-four {
+  background-image: url(/img/carousel/catalog_image_nd030.webp);
+}
+.img-card-header-five {
+  background-image: url(/img/carousel/Programming_for_Data_Science_with_Python_-_catalog_image.jpg);
+}
+.img-card-header-six {
+  background-image: url(/img/carousel/business_analytics_catalog_image.jpg);
+}
+.img-card-header-seven {
+  background-image: url(/img/carousel/catalog_image_nd072.webp);
+}
+.img-card-header-eight {
+  background-image: url(/img/carousel/data-structures.jpg);
 }
 
-.header-tag {
+/* Settings for tag inside image */
+#carousel .header-tag {
   align-self: start;
-  background-color: #ad3959;
   padding: 0 0.5rem;
   font-size: 13px;
   font-weight: 600;
@@ -499,32 +613,161 @@ input[type="checkbox"]:checked ~ #trialbar {
   border-radius: 5px;
 }
 
+/* Colors for the tags */
+.ht-new {
+  background-color: #ad3959;
+}
+.ht-popular {
+  background-color: #2a77aa;
+}
+.ht-top-rated {
+  background-color: #018377;
+}
+
+/* Image card body */
 .img-card-body {
   color: var(--primary-text-color);
   font-weight: 600;
   padding: 0.8rem;
+  height: 60px;
+  line-height: 1.3rem;
 }
 
-.sc-ratings {
+/* Image card footer with ratings and information */
+#carousel .img-card-footer {
+  padding: 0 0.8rem;
+}
+
+#carousel .sc-ratings {
   display: flex;
   justify-content: space-between;
   color: var(--primary-text-color);
   font-size: 12px;
 }
 
-.star-rating img {
+#carousel .star-rating img {
   margin-top: 4px;
   float: left;
   width: 14px !important;
 }
-.fa-signal {
+#carousel .fa-signal {
   color: var(--primary-border-color);
   font-size: 12px;
 }
 
-.img-card-footer {
-  padding: 0 0.8rem;
+#carousel .sc-ratings span {
+  color: var(--secondary-bg-color);
 }
-.img-card-footer h5 {
-  color: var(--primary-text-color);
+
+#carousel .star-rating span {
+  padding-left: 3px;
 }
+
+#carousel .img-card-footer h5,
+#carousel .img-card-footer p {
+  font-size: 13px;
+  color: var(--bg-darkgrey-color);
+  line-height: 1.3rem;
+}
+
+#carousel .img-card-footer h5 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+#carousel .img-card-footer p {
+  padding-bottom: 1rem;
+}
+
+/*
+================================================
+    Media Queries for the School section
+
+    Carousel
+================================================
+*/
+
+@media (min-width: 992px) {
+  #carousel {
+    padding: 0;
+    margin: 0 4.5rem;
+    position: relative;
+  }
+
+  #carousel .carousel-img-container {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+/*
+================================================
+    The Media Query below makes the child div go outside container with margin -2.4rem
+    This makes the card carousel show more cards and more beautifully
+================================================
+*/
+@media (min-width: 1400px) {
+  #carousel {
+    padding: 0;
+    margin: 0 -2.4rem;
+  }
+
+  .sc-carousel-items {
+    overflow: visible;
+  }
+}
+
+/*
+================================================
+    Next and Previous buttons
+
+    These only point to a section inside the card carousel.
+================================================
+*/
+
+.next,
+.prev {
+  background: transparent;
+  position: absolute;
+  z-index: 100;
+  height: 100%;
+  width: 3.5em;
+  top: 0;
+}
+
+.next {
+  right: -4.425rem;
+}
+
+.prev {
+  left: -4.425rem;
+}
+
+.next-icon,
+.prev-icon {
+  display: block;
+  height: 100%;
+  transition: opacity 0.3s ease;
+  opacity: 0.7;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: auto auto;
+}
+
+.next-icon {
+  background-image: url(/img/carousel/arrow-right-blue-solid.svg);
+}
+
+.prev-icon {
+  background-image: url(/img/carousel/arrow-left-blue-solid.svg);
+}
+
+/*
+================================================
+  Skill section with cards
+
+  Header and info
+================================================
+*/
