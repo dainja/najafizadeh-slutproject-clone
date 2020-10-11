@@ -5,17 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Pricing example</title>
+  <title>Udacity Clone</title>
 
   <!-- CSS Reset -->
   <link rel="stylesheet" href="/css/css-reset.css">
   <!-- Style CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Icon link to Googles icons -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
+  <!-- Font Awesome Script for using Icons -->
   <script src="https://kit.fontawesome.com/78122133c9.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-
+  <!-- Checkbox "hack" to close the top TRIAL BAR. -->
   <label class="tb-close-btn" for="checkbox-cb">&#10006;</label>
   <input type="checkbox" id="checkbox-cb">
 
@@ -30,12 +36,13 @@
     </div>
   </div>
 
-
+  <!-- This is the content container with the whole website inside -->
   <div class="content-container">
 
-
+    <!-- Top Navigation Start -->
     <div id="top-nav">
       <header class="tn-container">
+
         <div class="hamburger-icon w-20">
           <div class="hb-top"></div>
           <div class="hb-middle"></div>
@@ -58,7 +65,9 @@
         </div>
 
         <div class="tn-menu">
+
           <ul class="tn-menu-list">
+
             <li class="tn-menu-item">
               <a href="#" class="tn-menu-link">
                 Programs
@@ -87,15 +96,19 @@
                 Get Started
               </a>
             </li>
+
           </ul>
+
         </div>
 
         <div class="empty-div w-20"></div>
       </header>
     </div>
+    <!-- End of Navigation -->
 
 
 
+    <!-- Hero showcase start -->
     <div class="hero-container">
       <div id="hero-showcase">
         <div class="hero-showcase-container">
@@ -170,9 +183,11 @@
         </div>
       </div>
     </div>
+    <!-- Hero showcase End -->
 
 
 
+    <!-- School section (image carousel) start -->
     <div class="school-container">
       <div id="school-card">
         <h2>Explore our schools to find your perfect program</h2>
@@ -488,24 +503,174 @@
         </div>
       </div>
     </div>
+    <!-- School section (image carousel) end -->
 
 
+
+    <!-- Skill section (card section) start  -->
     <section id="skills">
       <div class="skills-container">
-        <h2></h2>
-        <p></p>
-        <ul></ul>
+        <h2 class="skills-header">Don't waste your valuable time or money</h2>
+        <p class="skills-text">Only Udacity has all the critical factors to deliver real results</p>
+        <ul class="skills-list">
+          <li class="skills-card">
+            <div class="skills-card-item border-blue">
+              <span class="material-icons briefcase">
+                work_outline
+              </span>
+              <h3 class="skills-card-title">Get real employable skills</h3>
+              <p class="skills-card-info">Our quality curriculum is designed with top-tier industry partners, not
+                academics, so you learn the high-impact skills that top companies want.</p>
+            </div>
+          </li>
+          <li class="skills-card">
+            <div class="skills-card-item border-yellow">
+              <span class="material-icons-outlined bulb">
+                emoji_objects
+              </span>
+              <h3 class="skills-card-title">Project-based, active learning</h3>
+              <p class="skills-card-info">Learn by doing with real-world projects and other hands-on exercises that lead
+                to real skills mastery.</p>
+            </div>
+          </li>
+          <li class="skills-card">
+            <div class="skills-card-item border-green">
+              <span class="material-icons schedule">
+                schedule
+              </span>
+              <h3 class="skills-card-title">Learn on your schedule</h3>
+              <p class="skills-card-info">Self-paced learning - whenever and wherever you want. Graduate while learning
+                part-time for 10 hrs/week.</p>
+            </div>
+          </li>
+          <li class="skills-card">
+            <div class="skills-card-item border-purple">
+              <span class="material-icons support">
+                support_agent
+              </span>
+              <h3 class="skills-card-title">The help you need, when you need it</h3>
+              <p class="skills-card-info">Reach out to our mentors 24/7 and have your coding questions answered quickly
+                so you can keep learning.</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
+    <!-- Skill section (card section) end -->
 
-    <!-- End of Content container (containing everything) -->
+
+
+    <!-- Explore more banner start -->
+    <section id="explore-banner">
+      <div class="eb-container">
+        <h2 class="eb-title">Make the most of your online learning experience</h2>
+        <p class="eb-info">Our Online Learning Resource Center has tips, tricks and inspiring stories to help you learn
+          while staying home.</p>
+        <a href="" class="eb-btn btn-custom">Explore resources</a>
+      </div>
+    </section>
+    <!-- Explore more banner end -->
+
+
+    <!-- Reviews section (icons and cards) start -->
+    <section id="reviews">
+      <div class="reviews-container">
+        <h2 class="reviews-header">Strength in numbers</h2>
+        <ul class="reviews-info">
+          <li>
+            <span class="material-icons-outlined school">
+              school
+            </span>
+            <h3 class="reviews-info-title">100,000+</h3>
+            <p class="reviews-info-text">Udacity graduations and counting</p>
+          </li>
+          <li>
+            <span class="material-icons-outlined ribbon">
+              military_tech
+            </span>
+            <h3 class="reviews-info-title">200+</h3>
+            <p class="reviews-info-text">Industry experts partnering to build our content</p>
+          </li>
+          <li>
+            <span class="material-icons chart">
+              show_chart
+            </span>
+            <h3 class="reviews-info-title">100+</h3>
+            <p class="reviews-info-text">Enterprise customers world-wide</p>
+          </li>
+        </ul>
+
+
+        <ul class="reviews-card-wrapper">
+          <li class="reviews-card">
+            <div class="reviews-story-card">
+              <div class="reviews-card-container border-green">
+                <div class="image-oval">
+                  <img src="/img/people/Jesse.webp" alt="">
+                </div>
+                <h3 class="reviews-card-name">Jesse</h3>
+                <blockquote class="reviews-card-text"><i> "The curriculum was directly targeted toward applied
+                    techniques
+                    with high
+                    profile projects – real datasets with industry partners. It helped me achieve my career transition
+                    goal."</i></blockquote>
+                <div class="reviews-card-company">
+                  <p class="now">Now at</p>
+                  <p class="work-title">Raytheon | Data Scientist</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="reviews-card">
+            <div class="reviews-story-card">
+              <div class="reviews-card-container border-purple">
+                <div class="image-oval">
+                  <img src="/img/people/Sundar.webp" alt="">
+                </div>
+                <h3 class="reviews-card-name">Sundar</h3>
+                <blockquote class="reviews-card-text"><i>"The curriculum was aligned with what I wanted to study. The
+                    assignments are specific to the industry I’m in. I was able to develop new language translation
+                    tools for my company."</i></blockquote>
+                <div class="reviews-card-company">
+                  <p class="now">Now at</p>
+                  <p class="work-title">Comcast | Lead Data Scientist</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="reviews-card">
+            <div class="reviews-story-card">
+              <div class="reviews-card-container border-blue">
+                <div class="image-oval">
+                  <img src="/img/people/David.webp" alt="">
+                </div>
+                <h3 class="reviews-card-name">David</h3>
+                <blockquote class="reviews-card-text"><i>"One of the things that attracted me to Udacity was a
+                    curriculum developed by people that worked for some of the biggest and most successful tech
+                    companies.”</i></blockquote>
+                <div class="reviews-card-company">
+                  <p class="now">Now at</p>
+                  <p class="work-title">Panera Bread | Data Administrator</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <a href="#" class="reviews-btn btn-custom">More success stories</a>
+      </div>
+    </section>
+    <!-- Reviews section (icons and cards) end -->
+
+
+
   </div>
+  <!-- End of Content container (containing everything) -->
 
-
-
+  <!-- Just to push my website up a little bit -->
   <div style="height: 800px;"></div>
 
-
+  <!-- Sorry didn't have time before deadline -->
+  <footer></footer>
 
 
 
